@@ -12,7 +12,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import cv2
 
-file_name = '百年孤独.txt'
+file_name = '平凡的世界-路遥.txt'
 name = file_name.replace('.txt','')
 extract = ExtractTxt(file_name)
 d = extract.jieba_parse()
@@ -53,7 +53,7 @@ def mat_bar():
 
     # 添加图例
     plt.legend(loc='upper right')
-    plt.savefig('%s柱状图.png' % name)  # 在show之前保存，否则为空白
+    plt.savefig('%s 柱状图.png' % name)  # 在show之前保存，否则为空白
     plt.show()
 
 
@@ -88,8 +88,8 @@ def word_cloud():
 
 
 if __name__ == '__main__':
-    word_cloud()
-    # mat_bar()
+    # word_cloud()
+    mat_bar()
 
 
 
